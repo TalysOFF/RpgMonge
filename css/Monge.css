@@ -1,0 +1,33 @@
+body {
+    background-image: url('https://img.freepik.com/fotos-gratis/sombras-escuras-e-roxas_23-2147734216.jpg?size=626&ext=jpg');
+    background-size: auto 100vh;
+    height: 100vh;
+    font-family: cursive;
+  }
+  
+  .menu {
+    background-color: none;
+  }
+  
+  .menu li {
+    list-style: none
+  }
+  .menu ul{
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  a {
+    color: DimGrey;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  .sub-titulo,
+  .titulo{
+    color: Black;
+    text-align: center;
+  }
