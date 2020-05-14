@@ -1,33 +1,142 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-    background-image: url('https://img.freepik.com/fotos-gratis/sombras-escuras-e-roxas_23-2147734216.jpg?size=626&ext=jpg');
-    background-size: auto 100vh;
-    height: 100vh;
-    font-family: cursive;
-  }
+  background-image: url('../img/fundo.jpg');
+  background-size: 300px;
+  height: 100vh;
+  font-family: 'Amatic SC', cursive;
+  font-size: 14px;
+}
+
+header {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sub-titulo,
+.titulo{
+  color: Black;
+  text-align: center;
+}
+
+.titulo {
+  font-size: 4em;
+  font-family: 'Kaushan Script', cursive;
+  transform: scale(0.1) translateX(250vh);
+  opacity: 0;
+  animation: linear 3s titulo forwards;
+}
+
+.sub-titulo {
+  transform: scale(0.1) translateX(-250vh);
+  opacity: 0;
+  animation: linear 3s sub-titulo forwards;
+}
+
+.menu {
+  background-color: none;
+  position: fixed;
+  width: 100vw;
+  top: 0;
+}
   
-  .menu {
-    background-color: none;
-  }
+.menu li {
+  list-style: none
+}
+.menu ul{
+  display: flex;
+  justify-content: space-around;
+  background-color: black;
+}
+
+.menu a {
+  display:block;
+  padding: 10px 20px;
+  transition: background-color 1ms, color 1ms, text-shadow 0.8s;
+  color: DimGrey;
+  text-decoration: none;
+}
+
+.menu a:active {
+  background-color: white;
+  color: black;
+}
   
-  .menu li {
-    list-style: none
-  }
-  .menu ul{
-    display: flex;
-    justify-content: space-around;
-  }
+.menu a:hover {
+  text-shadow: 0px 0px 7px whitesmoke;
+}
+
+.conteudo {
+  background-color: gold;
+  padding: 1em;
+  text-align: center;
+  min-height: 100vh
+}
+
+.conteudo h2 {
+  margin-bottom: 0.5em;
+  text-align: left;
+}
+
+.grid {
+  background-color: goldenrod;
+  display: grid;
+  gap: 1em;
+  min-height: 100vh
+}  
   
-  a {
-    color: DimGrey;
-    text-decoration: none;
+.img-portfolio {
+  height: 200px;
+  width: 180px;
+  object-fit: cover;
+  object-position: top;
+}
+
+.assinatura {
+  font-family: 'Alex Brush', cursive;
+  text-align: center;
+}
+
+@media (min-width: 450px) {
+  body {
+    font-size: 18px;
   }
-  
-  a:hover {
-    text-decoration: underline;
+}
+
+@media (min-width: 373px) {
+  .grid {
+    grid-template-columns: 150px 150px;
+    justify-content: center;
+    align-content: center;
   }
-  
-  .sub-titulo,
-  .titulo{
-    color: Black;
-    text-align: center;
+}
+
+
+
+@media (min-width: 545px) {
+  .grid {
+    grid-template-columns: 150px 150px 150px;
+    justify-content: center;
+    align-content: center;
   }
+}
+
+@keyframes titulo {
+  100% {
+    transform: scale(1) translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes sub-titulo {
+  100%{
+    transform: scale(1) translateX(0);
+    opacity: 1;
+  } 
+}
